@@ -137,6 +137,18 @@
     animation-range: entry 50% cover 50%;
   }
 
+  h2 {
+    background: linear-gradient(90deg, black, transparent);
+    background-size: 200%;
+    animation: reveal both linear;
+    animation-timeline: view();
+    background-repeat: no-repeat;
+    animation-range: entry 50% cover 50%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
   @keyframes fade {
     from {
       opacity: 0;
@@ -146,6 +158,15 @@
     }
     0% {
       opacity: 0;
+    }
+  }
+
+  @keyframes reveal {
+    from {
+      background-position-x: 200%;
+    }
+    to {
+      background-position-x: 0%;
     }
   }
 </style>
